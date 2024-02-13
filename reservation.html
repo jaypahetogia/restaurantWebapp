@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Sonic Dessert</title>
+    <link rel="stylesheet" type="text/css" href="reservation.css" />
+    <input type="hidden" name="table_number" value="">
+</head>
+<body>
+    <nav class="navigationBar">
+        <div class="navigationBar-box box">
+            <input type="checkbox" name="" id="">
+            <div class="burgerLines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="sonic.html">Home</a></li>
+                <li><a href="sonic.html#about">About</a></li>
+                <li><a href="sonic.html#dessert-menu">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="sonic.html#testimonials">Testimonial</a></li>
+                <li><a href="sonic.html#contact">Contact</a></li>
+            </ul>
+            <h1 class="logo">Sonic</h1>
+        </div>
+    </nav>
+    <section class="display-area" id="display">
+        <div class="display-box">
+            <p></p>
+            <p id = "welcome">Welcome to</p>
+            <h1 class="main-title" id="home">Sonic Dessert</h1>
+            <p id = "sub">Deliciously made with love</p>
+            <a href="#dessert-menu" class="btn btn-primary">Reservations</a>
+        </div>
+    </section>
+
+    <div id="restaurant-layout">
+        <div class="table" id="table1">
+            <span>Table 1</span>
+            <div class="table-details">
+                <p>Max Seating: 4</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+        <div class="table" id="table2">
+            <span>Table 2</span>
+            <div class="table-details">
+                <p>Max Seating: 2</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+        <div class="table" id="table3">
+            <span>Table 3</span>
+            <div class="table-details">
+                <p>Max Seating: 2</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+        <div class="table" id="table4">
+            <span>Table 4</span>
+            <div class="table-details">
+                <p>Max Seating: 8</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+        <div class="table" id="table5">
+            <span>Table 5</span>
+            <div class="table-details">
+                <p>Max Seating: 12</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+        <div class="table" id="table6">
+            <span>Table 6</span>
+            <div class="table-details">
+                <p>Max Seating: 6</p>
+                <p>Available Times: 6 PM, 8 PM</p>
+                <button class="book-now-btn" data-table="1">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="booking-form" style="display:none;">
+        <h2>Book Your Table</h2>
+        <form id="reservation-form" action="process_reservation.php" method="post">
+            <input type="text" name="customer_name" placeholder="Customer Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone_number" placeholder="Phone Number" required>
+            <input type="number" name="number_of_guests" placeholder="Number of Guests" required>
+            <textarea name="dietary_restrictions" placeholder="Dietary Restrictions"></textarea>
+            <textarea name="pre_drinks_order" placeholder="Pre-Drinks Order"></textarea>
+            <input type="hidden" name="table_number" value=""> <!-- Hidden field for table number -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="confirmation-message" style="display:none;">
+        <p>Your reservation has been confirmed. A confirmation email has been sent to your given email address.</p>
+    </div>
+
+    <script src="reservation.js"></script>
+</body>
+</html>
